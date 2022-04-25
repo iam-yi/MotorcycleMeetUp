@@ -4,7 +4,7 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Yis Plywood' });
+  res.render('index', { title: 'Motorcyle Meet Up' });
 });
 
 // Google OAuth login route

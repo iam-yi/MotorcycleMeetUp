@@ -1,6 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/san-jose-banner.jpeg") ;
+  background-repeat: no-repeat;
+
 }
 
 a {
@@ -17,3 +20,13 @@ a {
 .login img {
   height: 30px;
 }
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
