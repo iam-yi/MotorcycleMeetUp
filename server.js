@@ -42,7 +42,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 app.use('/', indexRouter);
 app.use('/calenders', calendersRouter);
 app.use('/posts', postsRouter);

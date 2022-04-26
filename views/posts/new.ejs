@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+<h2>Enter The Comment</h2>
+<form action="/posts/<%=postId %>/comments/create" method="POST">
+
+   
+    <label>comment
+        <input  required name="comment">
+    </label><br><br>
+    <input type="submit" value="Add Comment">
+    </form>
+<%- include('../partials/footer') %>

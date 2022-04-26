@@ -13,13 +13,17 @@
 </form>
 
 <br><br>
- 
-  <% posts.forEach(function(r) { %>
+<% if(posts) { %>
+  <% posts.forEach(function(post) { %>
     <section>
-    <div>Title: <%= posts.title  %> <%= r.title %> </div> 
-    <div>Content:  <%= posts.content %> <%= r.content %></div>
-    </section>
+      
+      <img src="<%= post.userAvatar %>"
+      class="img-circle" width="50" alt="avatar">
+    <div>Title: <%= post.title  %>  </div> 
+    <div>Content:  <%= post.content %> </div>
+    <a href="/posts/<%= post._id %>/comments/new">Add Comment</a>
+  </section>
     <br><br>
-    <a href="/posts/<%= m._id %>/comments">Add Comments</a>
     <% }); %>
+<% } %>
 <%- include('../partials/footer') %>
