@@ -9,5 +9,8 @@ const postSchema = new Schema({
     },
     content:{
         type: String
-    } 
+    }
+   
 })
+
+module.exports = mongoose.model('Post', postSchema);

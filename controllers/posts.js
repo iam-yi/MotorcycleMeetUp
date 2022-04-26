@@ -1,12 +1,29 @@
-const Posts = require('../models/post');
+const Post = require('../models/post');
 
 module.exports = {
-    index
-}
+    index,
+    show,
+    new: newPost,
+    create
+};
 
 function index(req, res) {
-     Posts.find({}, function(err, posts) {
-         res.render('posts', {title:'All Posts', posts});
-       });
+    Post.find({}, function(err, posts) {
+        res.render('posts/index', { posts });
+    });
 }
 
+function show(req, res) {
+    Post.findById(req.params.id, function(err, post){
+        res.render('posts/index', { post });  
+    });
+}
+
+function create(req, res) {
+    Post.create(req.body, function(err) {
+        res.redirect('/posts');
+    });
+}
+function newPost(req, res) {
+    res.render('posts/index', {title: 'All Post'});
+}

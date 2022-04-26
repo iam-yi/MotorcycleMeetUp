@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<h2>Welcome To Share Anything Here</h2>
+
+
+<form id="new-form" action="/posts" method="POST">
+  <label>Title:</label>
+  <input type="text" name="title">
+  <br><br>
+  <label>Content</label>
+  <input type="text" name="content">
+  <input type="submit" value="Add Posts">
+</form>
+
+<br><br>
+ 
+  <% posts.forEach(function(r) { %>
+    <section>
+    <div>Title: <%= posts.title  %> <%= r.title %> </div> 
+    <div>Content:  <%= posts.content %> <%= r.content %></div>
+    </section>
+    <br><br>
+    <a href="/posts/<%= m._id %>/comments">Add Comments</a>
+    <% }); %>
+<%- include('../partials/footer') %>
