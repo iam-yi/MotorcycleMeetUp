@@ -1,8 +1,7 @@
-<%- include('../partials/header') %>
 
 <h2>Welcome To Share Anything Here</h2>
-
-
+<%- include('../partials/header') %>
+<br><br>
 <form id="new-form" action="/posts" method="POST">
   <label>Title:</label>
   <input type="text" name="title">
@@ -19,12 +18,15 @@
       
       <img src="<%= post.userAvatar %>"
       class="img-circle" width="50" alt="avatar">
-    <div>Title: <%= post.title  %>  </div> 
-    <div>Content:  <%= post.content %> </div>
+    <div><%= post.title  %>  </div> 
+    <div>Content:  <%= post.content %> </div> 
     <a href="/posts/<%= post._id %>/comments/new">Add Comment</a>
+    <br><br>
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete</button>
-    </form>
+    <!-- <form action="/posts/<%= post._id %>/comments/new" method="NEW"></form>
+      <button type="submit">Add COMMNETS</button>
+    </form> -->
   </section>
     <br><br>
     <% }); %>
