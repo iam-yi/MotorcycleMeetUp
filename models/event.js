@@ -17,7 +17,7 @@ const eventSchema = new Schema({
    Date: {
     type: Number,
     default: function() {
-      return new Date().getFullYear();
+    return new Date().getFullYear();
     }
    },
    userName: String,

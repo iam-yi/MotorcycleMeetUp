@@ -1,5 +1,5 @@
 
-<h2>Post Meet Up Date Here</h2>
+<h2>Post Meet Up Infomation Here</h2>
 <%- include('../partials/header') %>
 <br><br>
 <form id="new-form" action="/events" method="POST">
@@ -19,13 +19,11 @@
       <img src="<%= event.userAvatar %>"
       class="img-circle" width="50" alt="avatar">
     <div><%= event.title  %>  </div> 
-    <div>Content:  <%= event.content %> </div> 
+    <div>Content: <%= event.content %> </div> 
     <br><br>
+    <button id="myButton">Going</button>
     <form action="/events/<%= event._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete</button>
-    <!-- <form action="/posts/<%= post._id %>/comments/new" method="NEW"></form>
-      <button type="submit">Add COMMNETS</button>
-    </form> -->
   </section>
     <br><br>
     <% }); %>
