@@ -5,4 +5,4 @@ const commentSchema = new Schema({
     content: String
 })
 
-odule.exports = mongoose.model('Post', postSchema);
+module.exports = mongoose.model('Comment', commentSchema);

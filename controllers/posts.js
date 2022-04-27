@@ -4,8 +4,18 @@ module.exports = {
     index,
     show,
     new: newPost,
-    create
+    create,
+    delete: deletePost
 };
+
+function deletePost(req,res) {
+    Post.findOne({_id: req.params.id})
+    .then(function(post) {
+        if(!post) return res.redirect('/posts');
+        post.remove();
+        res.redirect(`/posts`);
+    });
+}
 
 function index(req, res) {
     Post.find({}).populate('user')

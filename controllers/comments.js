@@ -14,10 +14,10 @@ function create(req, res) {
     Post.findOne({
         _id: req.params.id
     }, function(err, post) {
-        if(err) res.redirect(`/posts/${post._id}/show`);
+        if(err) res.redirect(`/posts/${post._id}/new`);
         req.body.post = post._id;
         var comment = new Comment(req.body);
         comment.save();
-        res.redirect(`/flights/${post._id}/show`);
+        res.redirect(`/posts/${post._id}`);
     });
 }
