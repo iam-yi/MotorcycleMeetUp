@@ -1,22 +1,47 @@
 const Post = require('../models/post');
-const { find } = require('../models/post');
+// const { find } = require('../models/post');
 
 module.exports = {
     index,
     new: newComments,
     create,
     show,
-    delete: deleteComments
+    delete: deleteComments,
+    update
 };
 
-function deleteComments(req, res) {
-    Comment.findOne({_id: req.params.id})
-    .then(function(comment) {
-        if(!comment) return res.redirect('/posts/:id');
-        comment.remove();
-        res.redirect(`/posts/:id`);
+function update(req, res) {
+    Post.findOne({'comments._id': req.params.id}, function(err, post) {
+        const comment = post.comments.id(req.params.id);
+        if (!comment.user._id.equals(req.user._id)) return res.redirect(`/posts/${post._id}`);
+        comment.content = req.body.content;
+        post.save(function(err) {
+            res.redirect(`/posts/${post._id}`);
+        });
     });
-}    
+  }
+
+  function deleteComments(req, res, next) {
+    Post.findOne({'comments._id': req.params.id}).then(function(post) {
+      const comment = post.comments.id(req.params.id);
+      if (!comment.user.equals(req.user._id)) return res.redirect(`/posts/${posts._id}`);
+      comment.remove();
+      post.save().then(function() {
+        res.redirect(`/posts/${post._id}`);
+      }).catch(function(err) {
+        return next(err);
+      });
+    });
+  }
+
+// function deleteComments(req, res) {
+//     Comment.findOne({_id: req.params.id})
+//     .then(function(comment) {
+//         if(!comment) return res.redirect('/posts/:id');
+//         comment.remove();
+//         res.redirect(`/posts/:id`);
+//     });
+// }    
 
 
 function index(req, res) {

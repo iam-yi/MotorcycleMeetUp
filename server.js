@@ -46,7 +46,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/events', eventsRouter);
 app.use('/posts', postsRouter);
-app.use('/', commentsRouter);
+app.use('/posts', commentsRouter);
 
 
 // catch 404 and forward to error handler

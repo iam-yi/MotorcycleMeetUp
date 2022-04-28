@@ -6,17 +6,8 @@ module.exports = {
     new: newPost,
     create,
     delete: deletePost,
-    edit,
-    update
+
 };
-
-function update(req, res) {
-
-}
-
-function edit(req, res) {
-
-}
 
 
 function deletePost(req,res) {
