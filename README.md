@@ -1,6 +1,7 @@
 <div align="center">
    <h1> Motorcycle Meet Up </h1>
 The app will let users post motorcyle meet up date and and location, also user can share anything and leave comments.
+</div>
 
 ## Screenshots
 

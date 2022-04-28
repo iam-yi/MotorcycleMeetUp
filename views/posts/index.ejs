@@ -12,6 +12,7 @@
 </form>
 
 <br><br>
+<hr>
 <% if(posts) { %>
   <% posts.forEach(function(post) { %>
     <section>
@@ -25,7 +26,7 @@
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete</button>
     </form>
-  
+    <hr>
   </section>
     <br><b
     <% }); %>

@@ -5,8 +5,19 @@ module.exports = {
     show,
     new: newPost,
     create,
-    delete: deletePost
+    delete: deletePost,
+    edit,
+    update
 };
+
+function update(req, res) {
+
+}
+
+function edit(req, res) {
+
+}
+
 
 function deletePost(req,res) {
     Post.findOne({_id: req.params.id})
@@ -26,7 +37,7 @@ function index(req, res) {
 
 function show(req, res) {
     Post.findById(req.params.id)
-        .populate('user')
+        .populate('user', 'comments')
         .exec(function(err, post) {
             res.render('posts/show', { post, postId: post._id });   
         })

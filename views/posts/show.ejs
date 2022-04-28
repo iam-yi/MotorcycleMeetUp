@@ -5,12 +5,12 @@
     <div>Title:  <%= post.title %> </div>
     <div>Content: <%= post.content %> </div>
   </section>
-
+ 
 
 <h2>Enter The Comment</h2>
-<form action="/posts/<%=postId %>/comments/create" method="POST">   
+<form action="/posts/<%=post._id %>/comments" method="POST">   
     <label>comment
-        <input type="text" required name="comment">
+        <input type="text" required name="content">
     </label><br><br>
     <input type="submit" value="Add Comment">
     </form>
@@ -18,10 +18,11 @@
     <% if(post) { %>
         <% post.comments.forEach(function(comment) { %>
           <section>
-            
             <img src="<%= comment.userAvatar %>"
             class="img-circle" width="50" alt="avatar">
-          <div>Comment  <%= comment.content %> </div> 
+          <div>Comment: <%= comment.content %> </div> 
+          <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
         <% }); %>
      <% } %>
 <%- include('../partials/footer') %>
