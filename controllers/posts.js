@@ -28,7 +28,7 @@ function show(req, res) {
     Post.findById(req.params.id)
         .populate('user')
         .exec(function(err, post) {
-            res.render('posts/index', { post });   
+            res.render('posts/show', { post, postId: post._id });   
         })
 }
 

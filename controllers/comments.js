@@ -3,11 +3,21 @@ const Comment = require('../models/comment')
 
 module.exports = {
     new: newComments,
-    create
+    create,
+    show
 };
 
+function show(req, res) {
+    Comment.findById(req.params.id)
+    .populate('user')
+    .exec(function(err, comment) {
+        res.render('posts/show', { comments });   
+    })
+}
+
+
 function newComments(req, res) {
-    res.render('posts/new', { postId: req.params.id });
+    res.render('comments/new', { postId: req.params.id });
 };
 
 function create(req, res) {

@@ -20,16 +20,14 @@
       class="img-circle" width="50" alt="avatar">
     <div><%= post.title  %>  </div> 
     <div>Content:  <%= post.content %> </div> 
-    <a href="/posts/<%= post._id %>/comments/new">Add Comment</a>
+    <a href="/posts/<%= post._id %>">See Details</a>
     <br><br>
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete</button>
-    <!-- <form action="/posts/<%= post._id %>/comments/new" method="NEW"></form>
-      <button type="submit">Add COMMNETS</button>
-    </form> -->
+    </form>
   
   </section>
-    <br><br>
+    <br><b
     <% }); %>
 <% } %>
 <%- include('../partials/footer') %>
