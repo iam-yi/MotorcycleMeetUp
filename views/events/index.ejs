@@ -15,15 +15,15 @@
 <% if(events) { %>
   <% events.forEach(function(event) { %>
     <section>
-      
       <img src="<%= event.userAvatar %>"
       class="img-circle" width="50" alt="avatar">
-    <div><%= event.title  %>  </div> 
+    <div>Title: <%= event.title  %>  </div> 
     <div>Content: <%= event.content %> </div> 
     <br><br>
     <form action="/events/<%= event._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete</button>
   </section>
+  <hr>
     <br><br>
     <% }); %>
 <% } %>

@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
-
+<br><br>
 <section id="show-page">
     <div>Title:  <%= post.title %> </div>
     <div>Content: <%= post.content %> </div>
   </section>
- 
-<h2>Enter The Comment</h2>
+ <br><br>
+<h3>Enter The Comment</h3>
 <form action="/posts/<%=post._id %>/comments" method="POST">   
     <label>comment</label>
         <input type="text" required name="content">
@@ -19,7 +19,9 @@
           <section>
             <img src="<%= comment.userAvatar %>"
             class="img-circle" width="50" alt="avatar">
-          <div>Comment: <%= comment.content %> </div> 
+            <br><br>
+          <div><%= comment.content %> </div> 
+          <br>
           <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
             <input name="content" value="<%= comment.content %>">       
             <button class="updateBtn" type="submit">Update Comment</button>

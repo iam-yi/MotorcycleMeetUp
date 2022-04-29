@@ -16,12 +16,13 @@
 <% if(posts) { %>
   <% posts.forEach(function(post) { %>
     <section>
-      
       <img src="<%= post.userAvatar %>"
       class="img-circle" width="50" alt="avatar">
-    <div><%= post.title  %>  </div> 
-    <div>Content:  <%= post.content %> </div> 
-    <a href="/posts/<%= post._id %>">See Details</a>
+      <br><br>
+    <div>Title:<%= post.title  %>  </div> 
+    <div>Content: <%= post.content %> </div> 
+    <br>
+    <a class="link" href="/posts/<%= post._id %>">See Details</a>
     <br><br>
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete</button>
