@@ -9,7 +9,6 @@ module.exports = {
 
 };
 
-
 function deletePost(req,res) {
     Post.findOne({_id: req.params.id})
     .then(function(post) {
