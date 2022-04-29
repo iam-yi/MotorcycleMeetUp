@@ -7,15 +7,14 @@
  
 <h2>Enter The Comment</h2>
 <form action="/posts/<%=post._id %>/comments" method="POST">   
-    <label>comment
+    <label>comment</label>
         <input type="text" required name="content">
-    </label><br><br>
+    <br><br>
     <input type="submit" value="Add Comment">
     </form>
     <br><br>
     <hr>
     <% if(post) { %>
-      <br>
         <% post.comments.forEach(function(comment) { %>
           <section>
             <img src="<%= comment.userAvatar %>"

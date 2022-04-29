@@ -21,7 +21,6 @@
     <div><%= event.title  %>  </div> 
     <div>Content: <%= event.content %> </div> 
     <br><br>
-    <button id="myButton">Going</button>
     <form action="/events/<%= event._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete</button>
   </section>

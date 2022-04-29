@@ -2,6 +2,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("../images/san-jose-banner.jpeg") ;
+  /* background-color: rgb(236, 194, 223); */
   background-repeat: no-repeat;
   background-size: 100%;
 }

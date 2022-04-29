@@ -1,4 +1,6 @@
 const Post = require('../models/post');
+const Comment = require('../models/post');
+
 // const { find } = require('../models/post');
 
 module.exports = {
