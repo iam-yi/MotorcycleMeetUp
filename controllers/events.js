@@ -32,14 +32,6 @@ function show(req, res) {
         })
 }
 
-// function create(req, res) {
-//     Post.create(req.body, function(err, post) {
-//         req.body.user = req.user._id;
-//         req.body.userName = req.user.name;
-//         req.body.userAvatar = req.user.avatar;
-//         res.redirect('/posts');
-//     });
-// }
 async function create(req, res) {
     req.body.user = req.user._id;
     req.body.userName = req.user.name;

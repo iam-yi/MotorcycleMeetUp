@@ -1,8 +1,6 @@
 const Post = require('../models/post');
 const Comment = require('../models/post');
 
-// const { find } = require('../models/post');
-
 module.exports = {
     index,
     new: newComments,
@@ -35,16 +33,6 @@ function update(req, res) {
       });
     });
   }
-
-// function deleteComments(req, res) {
-//     Comment.findOne({_id: req.params.id})
-//     .then(function(comment) {
-//         if(!comment) return res.redirect('/posts/:id');
-//         comment.remove();
-//         res.redirect(`/posts/:id`);
-//     });
-// }    
-
 
 function index(req, res) {
     Comment.find({}).populate('user')
