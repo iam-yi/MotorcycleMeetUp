@@ -5,7 +5,7 @@ body {
   background-color: rgb(63, 61, 63);
   background-repeat: no-repeat;
   background-size: 100%;
-  color: white
+  color: white;
 }
 
 .login {
@@ -44,6 +44,4 @@ a:hover {
 div {
   font-size: large;
 }
-div {
-  color: white;
-}
+
