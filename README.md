@@ -1,6 +1,6 @@
 <div align="center">
    <h1> Motorcycle Meet Up </h1>
-   ## Project 2  (P2) 
+   <h2>Project 2  (P2) </h2>
 The app will let users post motorcyle meet up date and and location, also user can share anything and leave comments.
 
 <h5>Yi Li</h5>
