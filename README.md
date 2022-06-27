@@ -4,14 +4,11 @@
 The app will let users post motorcyle meet up date and and location, also user can share anything and leave comments.
 
 <h5>Yi Li</h5>
-<a href="https://msyili.com" target="_blank">
-    <img src="https://img.shields.io/badge/-Portfolio:_user.github.io-darkgreen?style=flat&logo=medium"/>
-</a>
 <a href="https://www.linkedin.com/in/msyili/" target="_blank">
-    <img src="https://img.shields.io/badge/-linkedin.com/in/user-blue?style=flat&``logo=Linkedin&logoColor=white">
+    <img src="https://img.shields.io/badge/-linkedin.com/in/msyili-blue?style=flat&logo=Linkedin&logoColor=white">
  </a> 
 <a href="mailto:yli3623@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/-user@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
+    <img src="https://img.shields.io/badge/-yli3623@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
 </a>
 </div>
 
